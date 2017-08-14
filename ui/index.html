@@ -4,13 +4,14 @@
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am Amogh and this is my Web App
-        </div>
+        <form name="MyForm">
+            <h1>Login</h1>
+            <fieldset>Login</fieldset>
+            Username: <input type="text" id="username" name="username" maxlength="35"/><br><br>
+            Password: <input type="password" name="pswd" id="pswd" maxlength="35"/>
+            <input type="button" value="login"/>&nbsp;&nbsp;
+            <input type="reset" value="Clear"/>
+        </form>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>
