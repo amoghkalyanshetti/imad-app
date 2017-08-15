@@ -5,20 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne=
+var articles=
 {
-    title: 'Article One | Amogh Kalyanshetti' , 
-    heading: 'Article One',
-    date:   'August 15 2017',
-    content: ` <p>
-                    If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
-                </p>
-                <p>
-                    If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
-                </p>
-                <p>
-                    If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
-                </p>`
+    'article-one':
+    {
+        title: 'Article One | Amogh Kalyanshetti' , 
+        heading: 'Article One',
+        date:   'August 15 2017',
+        content: ` <p>
+                        If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
+                    </p>
+                    <p>
+                        If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
+                    </p>
+                    <p>
+                        If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
+                    </p>`
+    },
+    'article-two'
+    {
+        title: 'Article Two | Amogh Kalyanshetti' , 
+        heading: 'Article Two',
+        date:   'August 16 2017',
+        content: ` <p>
+                        This is second article
+                    </p>` 
+    },
+    'article-three':
+    {
+        title: 'Article Three | Amogh Kalyanshetti' , 
+        heading: 'Article Three',
+        date:   'August 16 2017',
+        content: ` <p>
+                        This is third article
+                    </p>` 
+    }
 };
 
 function createTemplate(data)
@@ -67,20 +88,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function (req,res)
+app.get('/:articleName',function (req,res)
 {
-   res.send(createTemplate(articleOne));
+    //articleName==article-one
+    //articles[articleName]=={} content object for article one
+    var articleName=req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two',function (req,res)
-{
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
 
-app.get('/article-three',function (req,res)
-{
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 
 
