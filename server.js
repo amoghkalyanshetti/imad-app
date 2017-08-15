@@ -22,7 +22,7 @@ var articles=
                         If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
                     </p>`
     },
-    'article-two'
+    'article-two':
     {
         title: 'Article Two | Amogh Kalyanshetti' , 
         heading: 'Article Two',
