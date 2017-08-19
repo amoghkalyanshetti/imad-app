@@ -42,10 +42,6 @@ var articles=
     }
 };
 
-var title;
-var heading;
-var content;
-var date;
 function createTemplate(data)
 {
     title=data.title;
