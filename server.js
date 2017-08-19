@@ -44,10 +44,10 @@ var articles=
 
 function createTemplate(data)
 {
-    title=data.title;
-    heading=data.heading;
-    content=data.content;
-    date=data.date;
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    var date=data.date;
     var htmlTemplate=
     `
         <html>
