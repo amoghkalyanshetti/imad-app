@@ -14,5 +14,5 @@ function moveRight()
     img.style.marginLeft=marginLeft+'px';
 }
 img.onClick=function(){
-  setInterval(moveRight,100);//every 100 milliseconds call movRight function
+  var interval=setInterval(moveRight,100);//every 100 milliseconds call movRight function
 };
