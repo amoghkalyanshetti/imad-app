@@ -19,17 +19,31 @@
 
 
 var button=document.getElementById('b');
-var counter=0;
+
 
 button.onclick = function() 
 {
-    //make request to the counter endpoint
+    //create a request object
+    var request =new XMLHttpRequest();
+    request.onreadystatechange=function()
+    {
+        if(request.readystate === XMLHttpRequest.DONE)
+        {
+            //take action
+            if(request.status === 200)
+            {
+                var counter=request.responseText;
+                var span=document.getElementById('count');
+                span.innerHTML = counter.toString();            
+            }
+        }
+    };
+    //not done yet
     
-    //capture the response and store it in a variable
+    //make the request
+    request.open('GET','http://amoghkalyanshetti.imad.hasura-app.io/counter',true);
+    request.send(null);
+
     
-    //render the variable in  the correct span
-    counter=counter+1;
-    var span=document.getElementById('count');
-    span.innerHTML = counter.toString();
 
 };
