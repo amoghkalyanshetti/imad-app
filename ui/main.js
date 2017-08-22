@@ -54,6 +54,7 @@ var submit=document.getElementById('sub');
 
 submit.onclick=function()
 {
+    console.log('In submit onclick');
     //make a request to the server and send the name
     
     //capture the list of names and render it as a list
