@@ -17,8 +17,10 @@
 //   var interval=setInterval(moveRight,100);//every 100 milliseconds call movRight function
 // };
 
-var counter=0;
+
 var button=document.getElementById('b');
+var counter=0;
+
 button.onclick = function() 
 {
     //make request to the counter endpoint
