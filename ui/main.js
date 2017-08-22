@@ -18,7 +18,8 @@
 // };
 
 var counter=0;
-b.onclick = function() 
+var button=document.getElementById('b');
+button.onclick = function() 
 {
     //make request to the counter endpoint
     
