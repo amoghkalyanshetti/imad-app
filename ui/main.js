@@ -18,16 +18,18 @@
 // };
 
 
-var button=document.getElementById('b');
+var button=document.getElementById('counter');
 
 
 button.onclick = function() 
 {
     //create a request object
     var request =new XMLHttpRequest();
+    
+    //capture the response and store it in a variable
     request.onreadystatechange=function()
     {
-        if(request.readystate === XMLHttpRequest.DONE)
+        if(request.readyState === XMLHttpRequest.DONE)
         {
             //take action
             if(request.status === 200)
