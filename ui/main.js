@@ -18,7 +18,7 @@
 // };
 
 var counter=0;
-button.onclick = function() 
+b.onclick = function() 
 {
     //make request to the counter endpoint
     
