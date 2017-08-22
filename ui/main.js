@@ -66,7 +66,7 @@ submit.onclick=function()
     }
     console.log(list);
     var ul=document.getElementById('unordered');
-    ul.setInnerHTML=list;
+    ul.innerHTML=list;
 };
 
 
