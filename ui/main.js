@@ -18,10 +18,10 @@
 // };
 
 
-var b1=document.getElementById('b');
+var button=document.getElementById('b');
 var counter=0;
 
-b.onclick = function() 
+button.onclick = function() 
 {
     //make request to the counter endpoint
     
@@ -29,8 +29,8 @@ b.onclick = function()
     
     //render the variable in  the correct span
     counter=counter+1;
-    var s=document.getElementById('count');
-    s.innerHTML = counter.toString();
+    var span=document.getElementById('count');
+    span.innerHTML = counter.toString();
     
     
     
