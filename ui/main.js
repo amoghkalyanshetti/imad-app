@@ -48,8 +48,7 @@ button.onclick = function()
     request.send(null);
 };
 
-var nameInput=document.getElementById('name');
-var n=nameInput.value;
+
 var submit=document.getElementById('sub');
 
 submit.onclick=function()
@@ -83,6 +82,9 @@ submit.onclick=function()
             }
         }
     };
+    
+    var nameInput=document.getElementById('name');
+    var n=nameInput.value;
       //make the request
     request.open('GET','http://amoghkalyanshetti.imad.hasura-app.io/submit-name?name='+n,true);
     request.send(null);
