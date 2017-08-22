@@ -41,7 +41,7 @@ button.onclick = function()
             }
         }
     };
-    //not done yet
+   
     
     //make the request
     request.open('GET','http://amoghkalyanshetti.imad.hasura-app.io/counter',true);
@@ -57,16 +57,37 @@ submit.onclick=function()
     console.log('In submit onclick');
     //make a request to the server and send the name
     
-    //capture the list of names and render it as a list
-    var names=['name1','name2','name3','name4'];
-    var list='';
-    for(var i=0;i<names.length;i++)
+    //create a request object
+    var request =new XMLHttpRequest();
+    
+    //capture the response and store it in a variable
+    request.onreadystatechange=function()
     {
-        list+='<li>'+names[i]+'</li>';
-    }
-    console.log(list);
-    var ul=document.getElementById('unordered');
-    ul.innerHTML=list;
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            //take action
+            if(request.status === 200)
+            {
+             //capture the list of names and render it as a list
+                var names=request.responseText;
+                names=JSON.parse(names);
+                var list='';
+                for(var i=0;i<names.length;i++)
+                {
+                    list+='<li>'+names[i]+'</li>';
+                }
+                console.log(list);
+                var ul=document.getElementById('unordered');
+                ul.innerHTML=list; 
+               
+            }
+        }
+    };
+      //make the request
+    request.open('GET','http://amoghkalyanshetti.imad.hasura-app.io/submit-name?name='+n,true);
+    request.send(null);
+    
+    
 };
 
 
