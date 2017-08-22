@@ -82,9 +82,10 @@ submit.onclick=function()
             }
         }
     };
-    
+    console.log('here');
     var nameInput=document.getElementById('name');
     var n=nameInput.value;
+    console.log('name read is '+n);
       //make the request
     request.open('GET','http://amoghkalyanshetti.imad.hasura-app.io/submit-name?name='+n,true);
     request.send(null);
