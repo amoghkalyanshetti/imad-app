@@ -15,42 +15,42 @@ var config=
 var app = express();
 app.use(morgan('combined'));
 
-var articles=
-{
-    'article-one':
-    {
-        title: 'Article One | Amogh Kalyanshetti' , 
-        heading: 'Article One',
-        date:   'August 15 2017',
-        content: ` <p>
-                        If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
-                    </p>
-                    <p>
-                        If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
-                    </p>
-                    <p>
-                        If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
-                    </p>`
-    },
-    'article-two':
-    {
-        title: 'Article Two | Amogh Kalyanshetti' , 
-        heading: 'Article Two',
-        date:   'August 16 2017',
-        content: ` <p>
-                        This is second article
-                    </p>` 
-    },
-    'article-three':
-    {
-        title: 'Article Three | Amogh Kalyanshetti' , 
-        heading: 'Article Three',
-        date:   'August 16 2017',
-        content: ` <p>
-                        This is third article
-                    </p>` 
-    }
-};
+// var articles=
+// {
+//     'article-one':
+//     {
+//         title: 'Article One | Amogh Kalyanshetti' , 
+//         heading: 'Article One',
+//         date:   'August 15 2017',
+//         content: ` <p>
+//                         If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
+//                     </p>
+//                     <p>
+//                         If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
+//                     </p>
+//                     <p>
+//                         If you're creating a NEW TOPIC, please be aware that we WILL DELETE it if it matches another topic. You can just create a new post in the similar topic present already.
+//                     </p>`
+//     },
+//     'article-two':
+//     {
+//         title: 'Article Two | Amogh Kalyanshetti' , 
+//         heading: 'Article Two',
+//         date:   'August 16 2017',
+//         content: ` <p>
+//                         This is second article
+//                     </p>` 
+//     },
+//     'article-three':
+//     {
+//         title: 'Article Three | Amogh Kalyanshetti' , 
+//         heading: 'Article Three',
+//         date:   'August 16 2017',
+//         content: ` <p>
+//                         This is third article
+//                     </p>` 
+//     }
+// };
 
 function createTemplate(data)
 {
