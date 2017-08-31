@@ -66,7 +66,7 @@ app.post('/login',function(req,res){
    	   {
    	       //check the password
    	       var dbString=result.rows[0].password;
-   	       dbString.split('$').[2]; //get salt value which isat third location
+   	       dbString.split('$')[2]; //get salt value which isat third location
    	       var hashedPassword=hash(password,salt);  //Creating a hash based on password submitted
    	       //and the original salt
    	       
