@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto=require('crypto');
-var bodyParser=require('body-parser')
+var bodyParser=require('body-parser');
 var Pool =require('pg').Pool;
 var config=
 {
@@ -44,7 +44,7 @@ app.post('/create-user',function(req,res){
    	 {
    	 	res.send('User successfully created'+username);
    	 }
-   });
+   } );
 });
 
 app.post('/login',function(req,res){
