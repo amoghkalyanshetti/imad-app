@@ -50,9 +50,9 @@
 
 
 //submit userame password to login
-var submit=document.getElementById('submit_btn');
+var submit1=document.getElementById('submit_btn');
 
-submit.onclick=function()
+submit1.onclick=function()
 {
     console.log('In submit onclick');
     //make a request to the server and send the name
