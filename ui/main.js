@@ -50,7 +50,7 @@
 
 
 //submit userame password to login
-var submit=document.getElementById('sub');
+var submit=document.getElementById('submit_btn');
 
 submit.onclick=function()
 {
